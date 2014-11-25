@@ -1,0 +1,20 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "title": "payload",
+  "type": "object",
+  "properties": {
+    "ref": { "type": "string" },
+    "after": {
+      "type": "string",
+      "pattern": "[\\w\\d]+"
+    },
+    "repository": {
+      "type": "object",
+      "properties": {
+        "name": { "type": "string" },
+        "full_name": { "type": "string" }
+      }
+    }
+  },
+  "required": ["ref", "after", "repository"]
+}
